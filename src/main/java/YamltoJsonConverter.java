@@ -16,12 +16,14 @@ import java.util.Scanner;
 public class YamltoJsonConverter {
 
     public static void main(String[] args) {
+        System.out.println("这是Yaml To Json 文件的转换！");
         Scanner scanner = new Scanner(System.in);
         // 输入YAML文件路径
         String yamlFilePath = "C:\\Users\\xie74\\Desktop\\input.yaml";
-        //下面这两行可以注释掉（如果在上面已经写好了路径）
-        System.out.print("请输入YAML文件路径：");
-        yamlFilePath = scanner.nextLine();
+
+            //下面这两行可以注释掉（如果在上面已经写好了路径）
+            System.out.print("请输入YAML文件路径：");
+            yamlFilePath = scanner.nextLine();
 
         // 输出JSON文件路径
         String jsonFilePath = "C:\\Users\\xie74\\Desktop\\output29.json";
@@ -45,7 +47,7 @@ public class YamltoJsonConverter {
 
             System.out.println("转换成功，请到指定路径查看");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("转换失败，输入或输出文件有误");
         }
     }
 }

@@ -27,13 +27,17 @@ public class JsonVisualizer {
         System.out.println(prettyJson);
     }
     public static void main(String[] args) throws Exception {
-
+        System.out.println("这是json文件的可视化！");
         String jsontxt = read("C:\\Users\\xie74\\Desktop\\input.json");
         //两种方式写路径
         Scanner scanner = new Scanner(System.in);
         System.out.print("请输入JSON 文件路径：");
+        try{
         String filePath = scanner.nextLine();
         jsontxt=read(filePath);
-
         JsonVisualizer.visualize(jsontxt);
-}}
+}catch (Exception e) {
+            System.out.println("未找到文件！");
+}
+
+    }}

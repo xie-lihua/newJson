@@ -1,3 +1,4 @@
+import com.google.gson.internal.bind.util.ISO8601Utils;
 import org.json.JSONObject;
 import org.yaml.snakeyaml.Yaml;
 
@@ -13,6 +14,7 @@ import java.util.Scanner;
 public class JsontoYamlConverter {
 
     public static void main(String[] args) {
+        System.out.println("这是Json To Yaml 文件的转换！");
         Scanner scanner = new Scanner(System.in);
 
         // 输入Json文件路径
@@ -52,7 +54,7 @@ public class JsontoYamlConverter {
 
             System.out.println("转换成功，请到指定路径查看");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("转换失败，输入或输出文件有误");
         }
     }
 }

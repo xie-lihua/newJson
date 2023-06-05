@@ -68,10 +68,15 @@ public class YamlVisualizer {
     public static void main(String[] args) throws IOException {
         // 获取用户输入的文件路径
         Scanner scanner = new Scanner(System.in);
+        System.out.println("这是yaml文件的可视化！");
+        try{
         System.out.print("请输入 YAML 文件路径：");
         String filePath = scanner.nextLine();
 
         // 执行可视化操作
         visualize(filePath);
     }
-}
+        catch (IOException e) {
+            System.out.println("未找到文件！");
+        }
+}}
